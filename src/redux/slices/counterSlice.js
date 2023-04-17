@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 const initialState = {
   value: 0,
-};  
+};
 
 export const counterSlice = createSlice({
   name: "counter",
@@ -22,6 +22,7 @@ export const counterSlice = createSlice({
       state.value += action.payload;
     },
   },
+ 
 });
 
 // Action creators are generated for each case reducer function
